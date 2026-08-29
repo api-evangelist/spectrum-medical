@@ -1,8 +1,21 @@
 aid: spectrum-medical
 name: Spectrum Medical
-description: 'Spectrum Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Spectrum Medical is a privately held medical technology company, co-founded by Steve Turner and Mark
+  Drain, with corporate headquarters in Cheltenham, England, a U.S. headquarters in Fort Mill, South
+  Carolina, and a European headquarters in Mirandola, Italy. It entered the global medical device market
+  in 2005 with its non-invasive System M diagnostic technology and today builds two connected product
+  families: Quantum Perfusion Technologies (workstations, centrifugal and roller pumps, oxygenators,
+  heater-coolers, sensor modules and single-use sterile technologies for cardiopulmonary bypass, ECMO and
+  other extracorporeal therapies) and Quantum Informatics (the VIPER clinical interfacing EMR, the VISION
+  server and Perfusion Information Management System). Its software surface is a customer-deployed,
+  on-premise stack: the VISION server passes case data to the hospital EHR over HL7 v2 interfaces through
+  a bundled Mirth Connect interface engine, and third-party device connectivity is delivered through
+  optional device-driver software rather than a public web API. Spectrum Medical is ISO/IEC 27001:2013
+  certified and its VIPER Clinical Information Solution 3.0 earned ONC-HIT 2014 Edition Modular
+  Certification via the Drummond Group. Systems are in use in over 60 countries.
 url: https://raw.githubusercontent.com/api-evangelist/spectrum-medical/refs/heads/main/apis.yml
+image: https://www.spectrummedical.com/images/spectrum-medical-logo.svg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +25,15 @@ created: '2026-08-28'
 modified: '2026-08-28'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- Health IT
+- Electronic Medical Records
+- Perfusion
+- Extracorporeal Life Support
+- Clinical Information Systems
+- Medical Device Connectivity
+- HL7
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/spectrum-medical-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/spectrum-medical_stock/
+  url: https://www.spectrummedical.com/
+- type: Support
+  url: https://www.spectrummedical.com/support
+- type: Blog
+  url: https://www.spectrummedical.com/news
+- type: PrivacyPolicy
+  url: https://www.spectrummedical.com/privacy
+- type: TermsOfService
+  url: https://www.spectrummedical.com/terms-conditions
+- type: Conformance
+  url: conformance/spectrum-medical-conformance.yml
+- type: Compliance
+  url: conformance/spectrum-medical-conformance.yml
+- type: Packages
+  url: packages/spectrum-medical-packages.yml
+- type: Plans
+  url: plans/spectrum-medical-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/spectrum-medical-rate-limits.yml
+- type: LLMsTxt
+  url: llms/spectrum-medical-llms.txt
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Spectrum Medical ships perfusion hardware and the on-premise Quantum Informatics / VIPER EMR stack,
+    and its only integration path is HL7 v2 messaging through a Mirth Connect engine installed on the
+    hospital's own Windows/SQL server (QI.yourdomain.com) — there is no public API, no developer portal,
+    no SDK and no GitHub organization, and api./developer./docs.spectrummedical.com do not resolve.
+  evidence:
+  - url: https://www.spectrummedical.com/openapi.json
+    status: 404
+  - url: https://www.spectrummedical.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.spectrummedical.com/
+    status: 0
+  - url: https://api.github.com/orgs/spectrummedical
+    status: 404
+  - url: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/vision
+    status: 200
+  checked: '2026-08-28'

@@ -1,0 +1,24 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.spectrummedical.com/support
+plan_count: 0
+plans: []
+note: >-
+  Spectrum Medical publishes no pricing page and no plans. It sells capital medical equipment, single-use
+  sterile technologies and on-premise clinical software through a direct sales and distributor motion; the
+  only named commercial program is "Sentinel Total Care", an annual equipment support plan described
+  qualitatively (extended warranty, accidental damage cover, loan equipment, on-site product specialists,
+  Quantum eLearning, software updates at no additional cost) with no published price, tier or quota. One
+  usage-based option is named without a figure: exclusive users of the Quantum SuperPAC technology,
+  qualified for ECMO applications only and already running Quantum Informatics, can take "an optional fixed
+  cost per patient pricing model". The ONC certification notice separately discloses that VIPER software
+  "may require ongoing yearly costs to support upgrades and general maintenance" plus one-time interface
+  costs, again with no amounts. plan_count is 0 because nothing priced is published, not because nothing
+  was looked for.
+evidence:
+- url: https://www.spectrummedical.com/support
+  status: 200
+- url: https://www.spectrummedical.com/news/viper-onc-hit-certification
+  status: 200
+- url: https://www.spectrummedical.com/contact
+  status: 200

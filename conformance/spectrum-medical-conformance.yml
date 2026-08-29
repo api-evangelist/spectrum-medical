@@ -1,0 +1,87 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.spectrummedical.com/
+note: >-
+  Spectrum Medical publishes no machine-readable API contract, so nothing here is derived from a spec.
+  Every entry below is graded against what the company states on its own site, and each carries the exact
+  page it was read from plus how strong that evidence is (`verification`). Where a claim is only vendor
+  prose with no contract to check it against, that is said plainly rather than scored as conformance.
+standards:
+- id: hl7v2
+  name: HL7 Version 2 messaging
+  conforms: true
+  domain_standard: true
+  verification: vendor-documented
+  evidence: >-
+    "VISION allows data collected via the Quantum Workstations or the Server Application to pass through
+    to the patient's EHR using HL7 interfaces & PDF uploads using an integrated communications interface
+    engine supplied by MIRTH Inc." The interface engine is deployed on a customer-supplied Windows/SQL
+    server; the system-specifications page names MIRTHDB as one of the three required databases per
+    environment. This is the company's integration surface — HL7 v2 messages through a customer-hosted
+    Mirth Connect engine, not a web API.
+  source: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/vision
+  status: 200
+- id: onc-hit-certification
+  name: ONC-HIT 2014 Edition Modular EHR Certification
+  conforms: true
+  domain_standard: true
+  verification: third-party-certified
+  evidence: >-
+    VIPER Clinical Information Solution 3.0 achieved ONC-HIT 2014 Edition Modular Certification through
+    the Drummond Group (an ONC-Authorized Certification Body), certificate number 02262015-3106-6,
+    certified 02/26/2015, against criteria 170.314 (a)(3,4,11-13); (d)(1,5); (g)(1,4). No Clinical
+    Quality Measures were tested. NOTE: this is the 2014 Edition, which predates the 21st Century Cures
+    Act API Condition of Certification — it therefore carries no HL7 FHIR / SMART / USCDI obligation and
+    no published FHIR service base URL. No current-edition (Cures Update) listing was found.
+  source: https://www.spectrummedical.com/news/viper-onc-hit-certification
+  status: 200
+- id: iso-27001
+  name: ISO/IEC 27001:2013 Information Security Management
+  conforms: true
+  domain_standard: false
+  verification: third-party-certified
+  evidence: >-
+    "Spectrum Medical has achieved certification to the International Standard for Information Security,
+    ISO/IEC 27001:2013. This recommendation has been given by a UKAS accredited certification body."
+    Announced 27 February 2020. The certificate itself is not published on the site.
+  source: https://www.spectrummedical.com/news/iso-27001-accreditation
+  status: 200
+- id: eu-mdr
+  name: EU Medical Device Regulation (MDR) 2017/745
+  conforms: true
+  domain_standard: true
+  verification: regulatory-approval
+  evidence: >-
+    Spectrum Medical announces MDR approval for the Quantum range of sterile technologies, alongside
+    separate CE approvals for the Quantum workstation, heater-cooler, centrifugal pump drive systems and
+    transport system. Device-market regulatory approval, not an API conformance claim.
+  source: https://www.spectrummedical.com/news/mdr-approval-for-the-quantum-range-of-sterile-technologies
+  status: 200
+- id: fhir
+  name: HL7 FHIR
+  conforms: false
+  domain_standard: true
+  verification: probed-absent
+  evidence: >-
+    No FHIR capability statement, service base URL, SMART discovery document or /.well-known/smart-configuration
+    is published on any Spectrum Medical host, and no api./developer./docs. subdomain resolves. The company's
+    published interoperability story is HL7 v2 through Mirth, not FHIR.
+  source: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/system-specifications
+  status: 200
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  verification: probed-absent
+  evidence: >-
+    /.well-known/oauth-authorization-server and /.well-known/openid-configuration both return 404 on
+    www.spectrummedical.com; no public authorization surface exists. Quantum Informatics is deployed
+    inside the hospital network behind a customer-supplied SSL certificate and DNS aliases.
+  source: https://www.spectrummedical.com/.well-known/openid-configuration
+  status: 404
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  verification: not-applicable
+  evidence: No public HTTP API is published, so there is no error envelope to assess.
+  source: https://www.spectrummedical.com/
+  status: 200

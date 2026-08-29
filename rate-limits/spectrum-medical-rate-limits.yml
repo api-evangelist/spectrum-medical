@@ -1,0 +1,20 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/system-specifications
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are published, and there is no public API surface for limits to apply to. Quantum
+  Informatics is an on-premise deployment (customer-supplied Windows Server + SQL Server, three databases
+  per environment, customer-supplied SSL certificate, customer DNS aliases such as QI.yourdomain.com), and
+  its integration path is HL7 v2 messaging through a bundled Mirth Connect engine inside the hospital
+  network. Throughput is therefore a function of the customer's own server sizing, which the
+  system-specifications page describes in hardware terms rather than as an API quota. The only published
+  cadence figure is data logging "on a per second basis" by the VISION server — a collection rate, not a
+  consumer rate limit. limit_count is an honest zero.
+evidence:
+- url: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/system-specifications
+  status: 200
+- url: https://www.spectrummedical.com/en-us/quantum-informatics-24-us/vision
+  status: 200

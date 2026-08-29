@@ -1,0 +1,27 @@
+generated: '2026-08-28'
+method: searched
+source: registry searches across npm, PyPI, RubyGems, crates.io, NuGet, Maven Central, pkg.go.dev and the GitHub API
+package_count: 0
+packages: []
+note: >-
+  No first-party Spectrum Medical client library exists in any public package registry, and the company
+  has no GitHub organization — the GitHub API returns 404 for spectrummedical, spectrum-medical and
+  SpectrumMedical. npm's search for "spectrum medical" returns only Adobe's unrelated React Spectrum
+  packages; pypi.org/pypi/spectrummedical/json returns 404. This is consistent with the rest of the
+  profile: the product is on-premise clinical software integrated over HL7 v2 through a bundled Mirth
+  Connect engine, and third-party device connectivity ships as optional device-driver software installed
+  on the Quantum Workstation rather than as a distributable SDK. No SDKs pointer is emitted in apis.yml,
+  because there is no SDK to point at.
+registries_probed:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=spectrum%20medical
+  status: 200
+  result: no first-party package
+- registry: pypi
+  query: https://pypi.org/pypi/spectrummedical/json
+  status: 404
+  result: absent
+- registry: github
+  query: https://api.github.com/orgs/spectrummedical
+  status: 404
+  result: no organization

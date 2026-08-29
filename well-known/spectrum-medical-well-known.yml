@@ -1,0 +1,32 @@
+generated: '2026-08-28'
+method: probed
+source: live HTTPS probes of the /.well-known/ namespace on every host named in apis.yml
+note: >-
+  Every probed path returned HTTP 404 with the site's standard HTML 404 page. Spectrum Medical serves no
+  /.well-known/ documents, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this file
+  records a verified absence, not a presence. Only one host exists to probe: api., developer. and docs.
+  subdomains do not resolve (NXDOMAIN), and the company publishes no public API.
+hosts:
+- host: www.spectrummedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
