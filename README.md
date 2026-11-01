@@ -64,5 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Spectrum Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/spectrum-medical_stock/
+Spectrum Medical is a privately held medical technology company, co-founded by Steve Turner and Mark Drain, with corporate headquarters in Cheltenham, England, a U.S. headquarters in Fort Mill, South Carolina, and a European headquarters in Mirandola, Italy. It entered the global medical device market in 2005 with its non-invasive System M diagnostic technology and today builds two connected product families: Quantum Perfusion Technologies (workstations, centrifugal and roller pumps, oxygenators, heater-coolers, sensor modules and single-use sterile technologies for cardiopulmonary bypass, ECMO and other extracorporeal therapies) and Quantum Informatics (the VIPER clinical interfacing EMR, the VISION server and Perfusion Information Management System). Its software surface is a customer-deployed, on-premise stack: the VISION server passes case data to the hospital EHR over HL7 v2 interfaces through a bundled Mirth Connect interface engine, and third-party device connectivity is delivered through optional device-driver software rather than a public web API. Spectrum Medical is ISO/IEC 27001:2013 certified and its VIPER Clinical Information Solution 3.0 earned ONC-HIT 2014 Edition Modular Certification via the Drummond Group. Systems are in use in over 60 countries.
+
+**Areas:** Company · Medical Devices · Healthcare · Health IT · Electronic Health Records · Perfusion · Extracorporeal Life Support · Clinical Information Systems · Medical Device Connectivity · HL7
+
+## Spectrum Medical on APIs.io
+
+Everything profiled for Spectrum Medical is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/spectrum-medical/](https://apis.io/providers/spectrum-medical/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Spectrum Medical Domain Security](https://apis.io/security/spectrum-medical/spectrum-medical-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Spectrum Medical Plans Pricing](https://apis.io/plans/spectrum-medical/spectrum-medical-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Spectrum Medical Rate Limits](https://apis.io/rate-limits/spectrum-medical/spectrum-medical-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.spectrummedical.com/)
+- [Support](https://www.spectrummedical.com/support)
+- [Blog](https://www.spectrummedical.com/news)
+- [Terms of service](https://www.spectrummedical.com/terms-conditions)
+- [Privacy policy](https://www.spectrummedical.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 16.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 28.9 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/spectrum-medical/](https://apis.io/providers/spectrum-medical/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Spectrum Medical: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/spectrum-medical/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
